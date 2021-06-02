@@ -1,10 +1,115 @@
+/* Branding colors */
+
+/* 
+Light green: 7ed567
+Medium green: 55c57a
+Dark green: 28b485
+*/
+
 *{
+    margin:0;
+    padding:0;
     box-sizing: border-box;
 }
 
 body{
-    margin: 0 0;
-    background-color: #5b5b63;
-    width: 100vw;
-    color: white;
+    font-family: 'Lato', sans-serif;
+    background-color:white;
+    color: black;
+    padding: 30px;
+}
+
+.header{    
+    height: 95vh;
+    background-image:linear-gradient(to right,#7ed5618c,#28b485a4) ,url('../img/hero.jpg');
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0,100% 0,100% 75%,0 100%);
+    position:relative;
+}
+
+.logobox{
+    position: absolute;
+    top:40px;
+    left:40px;
+}
+
+.logo{
+    height: 35px;;
+}
+
+.heading-primary{
+    color:#fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main, .heading-primary-sub{
+    display: block;
+    font-weight: 400;
+}
+.heading-primary-main{
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 35px;
+
+    /* animation properties */
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-delay: 2;
+}
+
+.heading-primary-sub{
+    font-size: 20px;
+    letter-spacing: 17.4px;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+}
+
+.text-box{
+    position: absolute;
+    top:40%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* 
+There are generally two types of animations in CSS.
+
+The first one, which also happens to be the easiest one, will be using the transition property.
+
+*/
+
+@keyframes moveInLeft{
+    0%{
+        opacity: 0; /* invisible*/
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0; /* invisible*/
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity:1;
+        transform: translateX(0);
+    }
+
+}
+
+.logobox:hover{
+    animation: moveInRight 3s ease-in;
 }
