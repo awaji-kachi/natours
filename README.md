@@ -1,2 +1,2 @@
-# _Project_Starter
-Basic boilerplate for web projects
+# NATOURS
+Sample web project for a fictional tourism company
