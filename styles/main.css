@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0 0;
+    background-color: #5b5b63;
+    width: 100vw;
+    color: white;
+}
